@@ -88,12 +88,12 @@ author:
   avatar           : "raghavendra.jpg"
   bio              : "Leads Blockchain R&D"
   location         : "Brisbane, Australia"
-  employer         : Supra: "https://supra.com/research-team/raghavendra/"
+  employer         : "Supra"
   pubmed           : # "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   googlescholar    : "https://scholar.google.co.in/citations?user=JZik0U0AAAAJ&hl=en"
   email            :
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
-  uri              :
+  uri              : "https://supra.com/research-team/raghavendra/"
   bitbucket        :
   codepen          :
   dribbble         :
