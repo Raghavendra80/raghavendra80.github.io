@@ -1,7 +1,7 @@
 ---
 layout: archive
 permalink: /wp/
-title: "White Papers & Blogs"
+title: "Whitepapers (co-authored)"
 author_profile: true
 redirect_from:
   - /wordpress/blog-posts/
@@ -10,9 +10,8 @@ redirect_from:
 <table>
   <tr>
     <td>
-      <h2>Supra Containers: Appchains on Layer 1</h2>
-      <a href="https://supra.com/documents/Supra-Containers-Whitepaper.pdf">Link</a>
-      <p>Appchains are blockchains dedicated to one or a group of related applications. Examples include DeFi Kingdoms on Avalanche, Osmosis, and dYdX on Cosmos. They provide sovereignty to the application creators and to its user community by allowing them to bring a custom token into circulation, set custom gas prices, permissioned deployment of smart contracts, etc. Polkadot Parachains, Cosmos Zones, Avalanche Subnets and Layer 2s are prominent appchain solutions. 
+      <a href="https://supra.com/documents/Supra-Containers-Whitepaper.pdf"><h2>Supra Containers: Appchains on Layer 1</h2></a>
+      <!-- <p>Appchains are blockchains dedicated to one or a group of related applications. Examples include DeFi Kingdoms on Avalanche, Osmosis, and dYdX on Cosmos. They provide sovereignty to the application creators and to its user community by allowing them to bring a custom token into circulation, set custom gas prices, permissioned deployment of smart contracts, etc. Polkadot Parachains, Cosmos Zones, Avalanche Subnets and Layer 2s are prominent appchain solutions. 
 
         In the era of high throughput Layer 1 blockchains, we believe current solutions are too expensive, cumbersome and restrictive as an entire network of node operators and economic security needs to be provisioned and bootstrapped for an application. Inspired by appchains, we offer Supra Containers on our high throughput, fast finality Supra Layer 1 blockchain. Supra Containers not only provide all the features of \appchain{s}, but also solve the well known issues of fragmented liquidity owing to the lack of smart contract atomic composability across these zones and networks.
         
@@ -22,24 +21,21 @@ redirect_from:
             - application creators by providing customization of gas tokens and gas prices, gated deployment of smart contracts, opening up auctioning markets for transaction fees, and most importantly Supra Containers enable cross-container composability and thus avoid liquidity fragmentation,
             - end consumers by providing a seamless access to multiple containers on a single platform and for services integrated across containers.
         Thus, Supra Containers enables and facilitates application-based businesses and push the host Supra Layer 1 blockchain towards creating networking effects.
-        </p>
+        </p> -->
     </td>
   </tr>
 
   <tr>
     <td>
-      <h2>HyperLoop: Rationally Secure Crosschain Bridge</h2>
-      <a href="hhttps://supra.com/documents/Supra-Hyperloop-Whitepaper.pdf">Link</a>
-      <p>In this work, we present Hyperloop, an efficient multi-sig blockchain bridge. We solve the ‘bridge problem’ with a committee requiring signatures from a simple majority of nodes noninteractively rather than an interactive protocol requiring a super-majority which is typical among most existing bridges. This yields an economic, computation and communication-efficient design wherein, with a smaller number of bridge nodes and for a given bridge value transfer limit, a smaller cumulative stake value may be employed for similar crypto-economic security. Considering the assumption of honesty among nodes to be a stretch in real-world settings, especially when high-value financial assets are involved, we study the ’bridge problem’ in more realistic rational and rational-malicious settings. Here, the bridge nodes, as rational parties, can deviate from the protocol arbitrarily for an economic incentive. We introduce a sliding window limiting mechanism that limits the total value that can be authorized by the bridge nodes in a given period of time. We introduce a new role of whistle-blowers to monitor the activities of bridge nodes, and raise complaints to a governance role, typically fulfilled by an Audit Decentralized Autonomous Organization (Audit-DAO), in case of malicious activity. Using game theory, we derive a robust incentive-penalty mechanism in these rational settings so that both the safety and liveness characteristics of the bridge are preserved and optimized. </p>  
+      <a href="hhttps://supra.com/documents/Supra-Hyperloop-Whitepaper.pdf"><h2>HyperLoop: Rationally Secure Crosschain Bridge</h2></a>
+      <!-- <p>In this work, we present Hyperloop, an efficient multi-sig blockchain bridge. We solve the ‘bridge problem’ with a committee requiring signatures from a simple majority of nodes noninteractively rather than an interactive protocol requiring a super-majority which is typical among most existing bridges. This yields an economic, computation and communication-efficient design wherein, with a smaller number of bridge nodes and for a given bridge value transfer limit, a smaller cumulative stake value may be employed for similar crypto-economic security. Considering the assumption of honesty among nodes to be a stretch in real-world settings, especially when high-value financial assets are involved, we study the ’bridge problem’ in more realistic rational and rational-malicious settings. Here, the bridge nodes, as rational parties, can deviate from the protocol arbitrarily for an economic incentive. We introduce a sliding window limiting mechanism that limits the total value that can be authorized by the bridge nodes in a given period of time. We introduce a new role of whistle-blowers to monitor the activities of bridge nodes, and raise complaints to a governance role, typically fulfilled by an Audit Decentralized Autonomous Organization (Audit-DAO), in case of malicious activity. Using game theory, we derive a robust incentive-penalty mechanism in these rational settings so that both the safety and liveness characteristics of the bridge are preserved and optimized. </p>   -->
     </td>   
   </tr>
 
   <tr>
-    <td>
-
-    <h2>HyperNova Bridgeless Crosschain Service</h2>
-    <a href="https://supra.com/documents/Supra-HyperNova-Whitepaper.pdf">Link</a>
-    <p>
+    <td>    
+    <a href="https://supra.com/documents/Supra-HyperNova-Whitepaper.pdf"><h2>HyperNova Bridgeless Crosschain Service</h2></a>
+    <!-- <p>
     Blockchain bridges enable the transfer of assets and data from one ledger to another. Traditional
     decentralized bridges typically generate a multi-sig or threshold signature on events of one chain
     to transfer assets and information to another. These bridge networks introduce new security
@@ -49,7 +45,7 @@ redirect_from:
     assumptions of the blockchains themselves, avoiding the introduction of any new security requirements.
     
     HyperNova is Supra’s trustless bridge solution for the scenarios in which the destination chain can
-    verify the correctness of events of the source chain. To verify the correctness of events of the source chain, the destination chain maintains updated auxiliary information, for example, the validator set in PoS blockchains. The safety of HyperNova and such solutions is guaranteed even when all Bridge Relay nodes are malicious, meaning bridge nodes cannot tamper with Bridge requests, nor can they spoof Bridge-requests to mint illegitimate tokens. For liveness, it requires at least one honest node. Hence the realized Trustless bridge HyperNova is secure, has low latency, provides revertable Bridge requests as a feature, and does not impose any rate-limiting on the amount of assets that can be transferred between chains.</p>
+    verify the correctness of events of the source chain. To verify the correctness of events of the source chain, the destination chain maintains updated auxiliary information, for example, the validator set in PoS blockchains. The safety of HyperNova and such solutions is guaranteed even when all Bridge Relay nodes are malicious, meaning bridge nodes cannot tamper with Bridge requests, nor can they spoof Bridge-requests to mint illegitimate tokens. For liveness, it requires at least one honest node. Hence the realized Trustless bridge HyperNova is secure, has low latency, provides revertable Bridge requests as a feature, and does not impose any rate-limiting on the amount of assets that can be transferred between chains.</p> -->
   </td>
   </tr>
 </table>
