@@ -12,7 +12,7 @@ redirect_from:
 ConsenSys R&D 
 ============
 Senior Researcher\
-Oct 2019 to Dec 2021\
+Oct 2019 to Dec 2021
 
 Crosschain Work
 - Performed Security Analysis of Atomic Crosschain Technologies
@@ -28,7 +28,7 @@ Ethereum 2 work
 Oracle Labs, Brisbane, Australia
 =====================================
 Senior Researcher\
-Jan 2014 to Oct 2019\
+Jan 2014 to Oct 2019
 
 At Java Vulnerability Detection team
 - Researched on a type system for information flow security for programming languages
@@ -42,20 +42,18 @@ At PLSQL Vulnerability Detection team
 International Institute of Information Technology, Bangalore
 ======================
 Postdoctoral Fellowship\
-Jun 2013 to Dec 2013\
+Jun 2013 to Dec 2013
 
 I worked on a research project to generate test cases for embedded system softwares meeting various coverage criteria. Here we investigated on designing dynamic symbolic executions mechanisms for state chart representations of embedded systems in Matlab.
 
 Dept. of CSA, Indian Institute of Science, Bangalore, 
 ======
-PhD
-- Jan 2007 to Jun 2013
+PhD (Jan 2007 to Jun 2013)
 - Supervisor: Prof. Deepak D’Souza.
 -Thesis: Model Checking Infinite State Systems for Information Flow Security Properties
 - I worked on the specification and verification of trace-based and bisimulation-based security properties on various classes of infinite state systems - Petri nets, pushdown systems, one counter automata. I also investigated on the problems of verifying some of the known security definitions against programs. 
 
-Masters
-- Aug 2004 to Jan 2007
+Masters (Aug 2004 to Jan 2007)
 - Supervisor: Prof. Deepak D’Souza. 
 - Thesis: Verification of Information Flow Security Properties
 - I worked on automatically verifying trace-based information security properties. We gave methods to automatically verify many of them for abstract systems like finite automata.
@@ -63,7 +61,8 @@ Masters
 Ittiam Systems 
 ==============
 Software Engineer\
-Aug 2002 to Jul 2004\
+Aug 2002 to Jul 2004
+
 Ittiam Systems (http://ittiam.com) is a DSP technology company. I programmed in C and assembly languages on different embedded processors. I worked on implementing speech codecs: GSM AMR, G.728, and audio codecs MPEG 1 /2 Layer 1 /2 /3 on different embedded processors like Videocore, ARC, ARM.
 
 Visvesvaraya Technological University (VTU)
