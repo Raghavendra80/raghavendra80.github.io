@@ -10,7 +10,7 @@ redirect_from:
 {% include base_path %}
 
 ConsenSys R&D 
-============
+-------------
 Senior Researcher\
 Oct 2019 to Dec 2021
 
@@ -26,7 +26,7 @@ Ethereum 2 work
 - Researched and presented polynomial commitments for Witness compression
 
 Oracle Labs, Brisbane, Australia
-=====================================
+------------------------------
 Senior Researcher\
 Jan 2014 to Oct 2019
 
@@ -40,14 +40,14 @@ At PLSQL Vulnerability Detection team
 - Working on identifying (first-order and second-order) SQL injections in PL/SQL code. Invented ways to model data flows through database operations under closed-world and open-world scenarios.
 
 International Institute of Information Technology, Bangalore
-======================
+--------------------------------
 Postdoctoral Fellowship\
 Jun 2013 to Dec 2013
 
 I worked on a research project to generate test cases for embedded system softwares meeting various coverage criteria. Here we investigated on designing dynamic symbolic executions mechanisms for state chart representations of embedded systems in Matlab.
 
-Dept. of CSA, Indian Institute of Science, Bangalore, 
-======
+Indian Institute of Science (Dept. of CSA), Bangalore, 
+--------------------------------
 PhD (Jan 2007 to Jun 2013)
 - Supervisor: Prof. Deepak D’Souza.
 -Thesis: Model Checking Infinite State Systems for Information Flow Security Properties
@@ -59,14 +59,14 @@ Masters (Aug 2004 to Jan 2007)
 - I worked on automatically verifying trace-based information security properties. We gave methods to automatically verify many of them for abstract systems like finite automata.
 
 Ittiam Systems 
-==============
+-------------
 Software Engineer\
 Aug 2002 to Jul 2004
 
 Ittiam Systems (http://ittiam.com) is a DSP technology company. I programmed in C and assembly languages on different embedded processors. I worked on implementing speech codecs: GSM AMR, G.728, and audio codecs MPEG 1 /2 Layer 1 /2 /3 on different embedded processors like Videocore, ARC, ARM.
 
 Visvesvaraya Technological University (VTU)
-==========================================
+--------------------------------
 Bachelor of Engineering (Computer Science)\
 Sep 1998 to Jul 2002\
 Sri Jayachamarajendra College of Engineering, Mysore, Karnataka, India, affiliated with Visvesvaraya Technological University, Belgaum, Karnataka, India.
