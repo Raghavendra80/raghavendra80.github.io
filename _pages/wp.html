@@ -60,6 +60,38 @@ redirect_from:
         </details>
       </td> 
       </tr>
+      <tr>
+        <td>
+          <a href="https://supra.com/documents/SupraOracles-Moonshot-Whitepaper.pdf"><h2>Moonshot Consensus Protocol</h2></a>
+          <details>
+            <summary>Abstract</summary>
+            <p>We introduce Moonshot, a new family of single-leader Byzantine Fault Tolerant (BFT) blockchainbased SMR protocols characterised by a new method
+              of round pipelining facilitated by optimistic proposal. We
+              formally describe Chained Moonshot, a variant of Moonshot that leverages the QC-chaining of Chained HotStuff
+              while maintaining the best-case block finalisation latency
+              of non-pipelined, vote-broadcast protocols like PBFT and
+              Tendermint.
+              
+              Chained Moonshot’s combination of optimistic proposal
+              and vote broadcasting ensure that validators are never
+              idle by enabling proposal and voting to occur at network
+              speed when the propagation times of Prepare and Proposal
+              messages are equal. Despite Chained Moonshot’s increased
+              communication complexity in the Normal Path when compared to its recent predecessors, it demonstrably improves
+              upon their block finalisation latency and block throughput.
+              Our theoretical analysis reveals that Chained Moonshot
+              has an expected 40% lower block finalisation latency and
+              50% decreased block period compared to Jolteon when
+              the propagation times of Prepare and Proposal messages
+              are equal. Our experimental results support this analysis,
+              with Moonshot exhibiting an average of 41.1% lower block
+              commit latency and 54.9% higher block throughput when
+              compared to Jolteon in WANs of 10, 50, 100 and 200 nodes
+              for varying payload sizes.
+            </p>
+          </details>
+        </td>
+      </tr>
     </table>
   </div>
   <div style="width: 48%;">
