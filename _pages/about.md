@@ -27,7 +27,7 @@ Meditation
 ==========
 
 
-I practice the method of meditation - Layavastha in Brahman, founded by YogaAcharya Shri Suresh Kumar Makam, Bangalore. His extensive writings on Spirituality, Aatma Vijnyana and Soul Sciences are hosted on the [website](https://sites.google.com/site/layavasthainbrahman). The goals and aims of the method of practice are as follows:
+I practice the method of meditation - Layavastha in Brahman, founded by YogaAcharya Shri Suresh Kumar Makam, Bangalore. His extensive writings on Spirituality, Aatma Vidya and Soul Sciences are hosted [here](https://sites.google.com/site/layavasthainbrahman). The goals and aims of the method of practice are as follows:
 1. To spread Brahma Vidya
 2. To remove the oppression from the oppressed
 3. To assist those honest and sincere seekers on the path of God realization or self realization within the short span of time or within the life.
