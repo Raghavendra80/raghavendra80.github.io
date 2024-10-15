@@ -17,15 +17,21 @@
   annote =	{Keywords: Blockchain consensus, Safety, Formal verification}
 }
 
-@InProceedings{doidge2024moonshotoptimizingchainbasedrotating,
-      title={Moonshot: Optimizing Chain-Based Rotating Leader BFT via Optimistic Proposals}, 
-      author={Isaac Doidge and Raghavendra Ramesh and Nibesh Shrestha and Joshua Tobkin},
-      booktitle =	{The 54th Annual IEEE/IFIP International Conference on Dependable Systems and Networks (DSN)},
-      year={2024},
-      eprint={2401.01791},
-      archivePrefix={arXiv},
-      primaryClass={cs.DC},
-      url={https://arxiv.org/abs/2401.01791}, 
+@INPROCEEDINGS {10646973,
+author = {I. Doidge and R. Ramesh and N. Shrestha and J. Tobkin},
+booktitle = {2024 54th Annual IEEE/IFIP International Conference on Dependable Systems and Networks (DSN)},
+title = {Moonshot: Optimizing Block Period and Commit Latency in Chain-Based Rotating Leader BFT},
+year = {2024},
+volume = {},
+issn = {},
+pages = {470-482},
+abstract = {Existing chain-based rotating-leader BFT SMR protocols for the partially synchronous network model with constant commit latencies incur block periods of at least $2\delta$ (where $\delta$ is the message transmission latency). While a protocol with a block period of $\delta$ exists under the synchronous model, its commit latency is linear in the size of the system. To close this gap, we present the first chain-based BFT SMR protocols with $\delta$ delay between the proposals of consecutive honest leaders and commit latencies of $3\delta$. We present three protocols for the partially synchronous model under different notions of optimistic responsiveness, two of which implement pipelining. All of our protocols achieve reorg resilience and two have short view lengths; properties that many existing chain-based BFT SMR protocols lack. We present an evaluation of our protocols in a wide-area network wherein they demonstrate significant increases in throughput and reductions in latency compared to the state-of-the-art, Jolteon. Our results also demonstrate that techniques commonly employed to reduce communication complexity—such as vote-pipelining and the use of designated vote-aggregators—actually reduce practical performance in many settings.},
+keywords = {wide area networks;protocols;throughput;delays;blockchains;proposals;low latency communication},
+doi = {10.1109/DSN58291.2024.00052},
+url = {https://doi.ieeecomputersociety.org/10.1109/DSN58291.2024.00052},
+publisher = {IEEE Computer Society},
+address = {Los Alamitos, CA, USA},
+month = {jun}
 }
 
 @article{ROBINSON2022100030,
