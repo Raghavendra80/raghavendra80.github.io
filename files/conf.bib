@@ -1,3 +1,21 @@
+@article{10.14778/3734839.3734855,
+author = {Zhang, Jianting and Luo, Zhongtang and Ramesh, Raghavendra and Kate, Aniket},
+title = {Optimal Sharding for Scalable Blockchains with Deconstructed SMR},
+year = {2025},
+issue_date = {March 2025},
+publisher = {VLDB Endowment},
+volume = {18},
+number = {7},
+issn = {2150-8097},
+url = {https://doi.org/10.14778/3734839.3734855},
+doi = {10.14778/3734839.3734855},
+abstract = {Sharding enhances blockchain scalability by dividing nodes into multiple shards to handle transactions in parallel. However, a size-security dilemma where every shard must be large enough to ensure its security constrains the efficacy of individual shards and the degree of sharding. Most existing solutions therefore rely on either weakening the adversary or making stronger network assumptions.This paper presents Arete, an optimally scalable blockchain sharding protocol designed to resolve the dilemma based on an observation that if individual shards can tolerate a higher fraction of Byzantine faults, we can securely create smaller shards in a larger quantity. The key idea of Arete, therefore, is to improve the security resilience of shards by dividing the blockchain's State Machine Replication (SMR) process. Like modern blockchains, Arete first decouples SMR in three steps: transaction dissemination, ordering, and execution. However, for Arete, a single ordering shard performs the ordering task while multiple processing shards perform the dissemination and execution of blocks. As processing shards do not run consensus, each of those tolerates up to half compromised nodes. Moreover, the SMR process in the ordering shard is extremely lightweight as it only operates on the block digests. Second, Arete considers safety and liveness against Byzantine failures separately to improve the safety threshold further while tolerating temporary liveness violations in a controlled manner. Apart from creating more optimal-size shards, such a deconstructed SMR scheme empowers us to devise a novel certify-order-execute architecture to fully parallelize transaction handling, thereby significantly improving the performance. We implement Arete and evaluate it on the AWS environment by running up to 500 nodes. Our results demonstrate that Arete outperforms representative sharding protocols in scalability, throughput, and cross-shard latency without compromising on intra-shard latency.},
+journal = {Proc. VLDB Endow.},
+month = mar,
+pages = {2198–2211},
+numpages = {14}
+}
+
 @InProceedings{praveen_et_al:OASIcs.FMBC.2024.3,
   author =	{Praveen, M. and Ramesh, Raghavendra and Doidge, Isaac},
   title =	{{Formally Verifying the Safety of Pipelined Moonshot Consensus Protocol}},
