@@ -158,6 +158,18 @@
       }
     }
   }
+
+  body.has-sidebar & {
+    &--overlay .wrapper {
+      @include breakpoint($large) {
+        padding-left: 18%;
+      }
+
+      @include breakpoint($x-large) {
+        padding-left: $sidebar-link-max-width + 2em;
+      }
+    }
+  }
 }
 
 .page__hero-image {
