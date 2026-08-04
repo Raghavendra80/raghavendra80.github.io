@@ -1,0 +1,119 @@
+---
+layout: archive
+permalink: /whitepapers/
+title: "Whitepapers"
+author_profile: true
+redirect_from:
+  - /wp/
+  - /wordpress/blog-posts/
+---
+
+<table>
+  <tr>
+    <td>
+      <a href=" https://supra.com/documents/SupraTech-Whitepaper.pdf"><h2>Supra Blockchain Infrastructure Stack</h2></a>
+      <details>
+        <summary>Abstract</summary>
+        <p>We present an overview of Supra’s blockchain infrastructure technology in this whitepaper.
+          We connect our multiple innovations, which were published over the years, into a resilient,
+          extreme performance architecture that vertically integrates MultiVM smart contract support and
+          native services: such as price feed oracles, on-chain randomness, cross-chain communications, and
+          automation.
+
+          We describe the end-to-end transaction flow of Supra’s blockchain and show how we mitigate
+          censorship and Maximal Extractable Value (MEV) attack vectors. We showcase Supra network’s
+          capabilities in terms of our transaction throughput and commit latency through experimental studies.
+          
+          The Supra network provides a wide range of services and features on a shared security platform.
+          These include capabilities such as our novel Distributed Oracle Agreement (DORA), Distributed
+          Verifiable Random Functions (DVRF), a zero-block delay automation network, AppChain inspired
+          Containers, MultiVM support, and optimized block execution via parallel transaction processing.
+          Additionally, our bridge designs—HyperLoop and HyperNova—position Supra as the world’s first
+          “IntraLayer” linking multiple chains to and from Supra through logic executed by Supra’s smart
+          contract platform.
+        </p>
+      </details>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <a href="https://supra.com/documents/Supra-Containers-Whitepaper.pdf"><h2>Supra Containers: Appchains on Layer 1</h2></a>
+      <details>
+        <summary>Abstract</summary>
+        <p>Appchains are blockchains dedicated to one or a group of related applications. Examples include DeFi Kingdoms on Avalanche, Osmosis, and dYdX on Cosmos. They provide sovereignty to the application creators and to its user community by allowing them to bring a custom token into circulation, set custom gas prices, permissioned deployment of smart contracts, etc. Polkadot Parachains, Cosmos Zones, Avalanche Subnets and Layer 2s are prominent appchain solutions. 
+
+        In the era of high throughput Layer 1 blockchains, we believe current solutions are too expensive, cumbersome and restrictive as an entire network of node operators and economic security needs to be provisioned and bootstrapped for an application. Inspired by appchains, we offer Supra Containers on our high throughput, fast finality Supra Layer 1 blockchain. Supra Containers not only provide all the features of \appchain{s}, but also solve the well known issues of fragmented liquidity owing to the lack of smart contract atomic composability across these zones and networks.
+        
+        
+        Compared to existing appchain solutions, Supra Containers offer a better model for:
+        
+            - application creators by providing customization of gas tokens and gas prices, gated deployment of smart contracts, opening up auctioning markets for transaction fees, and most importantly Supra Containers enable cross-container composability and thus avoid liquidity fragmentation,
+            - end consumers by providing a seamless access to multiple containers on a single platform and for services integrated across containers.
+        Thus, Supra Containers enables and facilitates application-based businesses and push the host Supra Layer 1 blockchain towards creating networking effects.
+        </p>
+      </details>
+    </td>
+  </tr>
+
+  <tr>
+    <td>
+      <a href="hhttps://supra.com/documents/Supra-Hyperloop-Whitepaper.pdf"><h2>HyperLoop: Rationally Secure Crosschain Bridge</h2></a>
+      <details>
+        <summary>Abstract</summary>
+        <p>In this work, we present Hyperloop, an efficient multi-sig blockchain bridge. We solve the 'bridge problem' with a committee requiring signatures from a simple majority of nodes noninteractively rather than an interactive protocol requiring a super-majority which is typical among most existing bridges. This yields an economic, computation and communication-efficient design wherein, with a smaller number of bridge nodes and for a given bridge value transfer limit, a smaller cumulative stake value may be employed for similar crypto-economic security. Considering the assumption of honesty among nodes to be a stretch in real-world settings, especially when high-value financial assets are involved, we study the 'bridge problem' in more realistic rational and rational-malicious settings. Here, the bridge nodes, as rational parties, can deviate from the protocol arbitrarily for an economic incentive. We introduce a sliding window limiting mechanism that limits the total value that can be authorized by the bridge nodes in a given period of time. We introduce a new role of whistle-blowers to monitor the activities of bridge nodes, and raise complaints to a governance role, typically fulfilled by an Audit Decentralized Autonomous Organization (Audit-DAO), in case of malicious activity. Using game theory, we derive a robust incentive-penalty mechanism in these rational settings so that both the safety and liveness characteristics of the bridge are preserved and optimized.</p>
+      </details>
+    </td>   
+  </tr>
+
+  <tr>
+    <td>    
+    <a href="https://supra.com/documents/Supra-HyperNova-Whitepaper.pdf"><h2>HyperNova Bridgeless Crosschain Service</h2></a>
+    <details>
+      <summary>Abstract</summary>
+      <p>
+      Blockchain bridges enable the transfer of assets and data from one ledger to another. Traditional
+      decentralized bridges typically generate a multi-sig or threshold signature on events of one chain
+      to transfer assets and information to another. These bridge networks introduce new security
+      assumptions typically in the form of an honest majority requirement among the bridge nodes.
+      However, since these networks attract and settle such large volumes of cross-chain transfers, they are quickly seen as honeypots for targeted attacks. It is ideal to realize solutions that do not introduce new security requirements beyond the chains' native security assumptions.
+      Trustless bridges or Relay bridges realize this ideal and preserve the base-layer native security
+      assumptions of the blockchains themselves, avoiding the introduction of any new security requirements.
+      
+      HyperNova is Supra's trustless bridge solution for the scenarios in which the destination chain can
+      verify the correctness of events of the source chain. To verify the correctness of events of the source chain, the destination chain maintains updated auxiliary information, for example, the validator set in PoS blockchains. The safety of HyperNova and such solutions is guaranteed even when all Bridge Relay nodes are malicious, meaning bridge nodes cannot tamper with Bridge requests, nor can they spoof Bridge-requests to mint illegitimate tokens. For liveness, it requires at least one honest node. Hence the realized Trustless bridge HyperNova is secure, has low latency, provides revertable Bridge requests as a feature, and does not impose any rate-limiting on the amount of assets that can be transferred between chains.</p>
+    </details>
+  </td> 
+  </tr>
+  <tr>
+    <td>
+      <a href="https://supra.com/documents/SupraOracles-Moonshot-Whitepaper.pdf"><h2>Moonshot Consensus Protocol</h2></a>
+      <details>
+        <summary>Abstract</summary>
+        <p>We introduce Moonshot, a new family of single-leader Byzantine Fault Tolerant (BFT) blockchainbased SMR protocols characterised by a new method
+          of round pipelining facilitated by optimistic proposal. We
+          formally describe Chained Moonshot, a variant of Moonshot that leverages the QC-chaining of Chained HotStuff
+          while maintaining the best-case block finalisation latency
+          of non-pipelined, vote-broadcast protocols like PBFT and
+          Tendermint.
+          
+          Chained Moonshot’s combination of optimistic proposal
+          and vote broadcasting ensure that validators are never
+          idle by enabling proposal and voting to occur at network
+          speed when the propagation times of Prepare and Proposal
+          messages are equal. Despite Chained Moonshot’s increased
+          communication complexity in the Normal Path when compared to its recent predecessors, it demonstrably improves
+          upon their block finalisation latency and block throughput.
+          Our theoretical analysis reveals that Chained Moonshot
+          has an expected 40% lower block finalisation latency and
+          50% decreased block period compared to Jolteon when
+          the propagation times of Prepare and Proposal messages
+          are equal. Our experimental results support this analysis,
+          with Moonshot exhibiting an average of 41.1% lower block
+          commit latency and 54.9% higher block throughput when
+          compared to Jolteon in WANs of 10, 50, 100 and 200 nodes
+          for varying payload sizes.
+        </p>
+      </details>
+    </td>
+  </tr>
+</table>

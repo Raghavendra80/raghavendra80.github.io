@@ -2,10 +2,16 @@
 permalink: /
 title: "Blockchain R & D"
 author_profile: true
+header:
+  overlay_color: "#0d1117"
+  overlay_filter: "0.5"
+excerpt: "VP of R&D at Supra — building the fourth generation of blockchain infrastructure."
 redirect_from: 
   - /about/
   - /about.html
 ---
+I lead R&D at Supra, working on distributed systems and protocol design for a fourth-generation blockchain platform. Below is a bit about the path that led here, and the thinking behind it.
+
 The release of Satoshi's Bitcoin paper marked the beginning of a silent revolution. Bitcoin, the first generation of blockchain, was designed solely for payments. Ethereum expanded this concept by introducing Turing-complete on-chain programs, heralding the second generation of blockchains, and leading to the birth of Decentralized Finance (DeFi). As DeFi gained traction, it became a killer app for blockchains. Scalability remained a significant challenge. Prominent blockchains like Solana, Aptos, Sui, and Layer 2 solutions like Arbitrum, Optimism, and appchain ecosystems like Cosmos and Polkadot began to emerge. We are now in the third generation of blockchains, where scalability is reasonably managed. However, the main challenge remains the widespread adoption and onboarding of individuals and institutions.
 
 Supra
