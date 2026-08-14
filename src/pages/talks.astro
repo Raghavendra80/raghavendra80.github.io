@@ -1,0 +1,62 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const talks = [
+  { title: 'DeFi Trends: Supra - Indonesia Online Workshop', date: 'July 18, 2026', embed: 'https://youtube.com/embed/EmHaUNCbgEk' },
+  { title: 'Supra Containers at ETH India', date: 'January 2025', embed: 'https://youtube.com/embed/GzDxUn7bPIY' },
+  { title: "India Blockchain Week 2024 Interview on Supra's Uniqueness", date: 'February 19, 2025', embed: 'https://youtube.com/embed/p6GrOSujpgg' },
+  { title: 'Supra Containers: Appchains on Layer 1', date: 'November 14, 2024', embed: 'https://youtube.com/embed/epNzyTjPrk4' },
+  { title: 'Parallel Execution of Transactions and Supra Containers', date: 'May 30, 2024', embed: 'https://www.youtube.com/embed/hBNGw_JTaoQ' },
+  { title: 'Blockchain Interoperability Solutions', date: 'September 22, 2023', embed: 'https://player.vimeo.com/video/867085934' },
+  { title: 'Conversation with Halborn', date: 'July 15, 2023', embed: 'https://www.youtube.com/embed/IcFgkpRMFwM' },
+  { title: 'Moonshot Consensus', date: 'July 12, 2023', link: 'https://supra.com/news/moonshot-consensus/' },
+  { title: 'Ethereum State Expiry', date: 'October 27, 2021', embed: 'https://www.youtube.com/embed/LjGPCX2V1qk' },
+  { title: 'Polynomial Commitments for Witness Compression for Ethereum 1.x', date: 'July 8, 2020', embed: 'https://www.youtube.com/embed/1Iaxr6FP3VU' },
+  { title: 'Ethereum 2 Cross Shard Techniques', date: 'April 2, 2020', embed: 'https://www.youtube.com/embed/d8z7fUpJzsk' },
+];
+---
+<BaseLayout title="Talks & Videos" description="Talks and videos by Raghavendra Ramesh.">
+  <section class="section wrap reveal" style="border-top: none;">
+    <h2>Talks &amp; Videos</h2>
+    <div class="talks-grid">
+      {talks.map((talk) => (
+        <div class="card talk-card">
+          <h3 style="font-size: 1rem; margin-top: 0;">{talk.title}</h3>
+          <p class="pill">{talk.date}</p>
+          {talk.embed && (
+            <div class="talk-card__embed">
+              <iframe src={talk.embed} loading="lazy" frameborder="0" allow="autoplay; encrypted-media; fullscreen" allowfullscreen title={talk.title}></iframe>
+            </div>
+          )}
+          {talk.link && <a class="btn btn--ghost" href={talk.link} target="_blank" rel="noopener noreferrer">View Article</a>}
+        </div>
+      ))}
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .talks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1.25rem;
+    margin-top: 1.5rem;
+  }
+
+  .talk-card__embed {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+    margin-top: 0.75rem;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+
+  .talk-card__embed iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+</style>

@@ -1,0 +1,25 @@
+---
+const navItems = [
+  { label: 'Home', href: '/' },
+  { label: 'Publications', href: '/publications/' },
+  { label: 'Whitepapers', href: '/whitepapers/' },
+  { label: 'Blog', href: '/blog/' },
+  { label: 'Talks & Videos', href: '/talks/' },
+  { label: 'CV', href: '/cv/' },
+];
+const currentPath = Astro.url.pathname;
+---
+<header class="masthead">
+  <div class="wrap masthead__inner">
+    <a href="/" class="masthead__brand">raghavendra<span class="glow-text">.dev</span></a>
+    <nav class="masthead__nav" aria-label="Primary">
+      {navItems.map((item) => (
+        <a href={item.href} class:list={[{ 'is-active': currentPath === item.href }]}>{item.label}</a>
+      ))}
+    </nav>
+    <button id="cmdk-trigger" class="cmdk-trigger" type="button" aria-label="Open command palette">
+      <span>Search</span>
+      <kbd>⌘K</kbd>
+    </button>
+  </div>
+</header>

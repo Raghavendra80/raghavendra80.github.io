@@ -1,0 +1,30 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const posts = [
+  {
+    title: 'Blockchain Interoperability: An Overview of the Current Research',
+    href: 'https://consensys.io/blog/blockchain-interoperability-an-overview-of-the-current-research/',
+  },
+  {
+    title: 'Crypto — The Transformative Power of Decentralisation, Channelled Through Governments (United States)',
+    href: 'https://medium.com/@raghavendra.kaundinya/crypto-the-transformative-power-of-decentralisation-channelled-through-governments-e6f885cd0313',
+  },
+  {
+    title: 'Crypto — The Transformative Power of Decentralisation, Channelled Through Governments (India)',
+    href: 'https://medium.com/@raghavendra.kaundinya/crypto-the-transformative-power-of-decentralisation-channelled-through-governments-cae5312f4705',
+  },
+];
+---
+<BaseLayout title="Blog" description="Blog posts by Raghavendra Ramesh.">
+  <section class="section wrap reveal" style="border-top: none;">
+    <h2>Blog</h2>
+    <div style="display: grid; gap: 1rem; margin-top: 1.5rem;">
+      {posts.map((post) => (
+        <a class="card" href={post.href} target="_blank" rel="noopener noreferrer" style="display: block; color: var(--text);">
+          {post.title} <span aria-hidden="true">→</span>
+        </a>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

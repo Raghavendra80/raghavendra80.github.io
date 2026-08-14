@@ -1,0 +1,100 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout title="CV" description="Career history of Raghavendra Ramesh.">
+  <section class="section wrap reveal" style="border-top: none;">
+    <h2>Previously</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <h3>ConsenSys R&amp;D — Senior Researcher</h3>
+        <p class="pill">Oct 2019 – Dec 2021</p>
+        <p><strong>Crosschain Work</strong></p>
+        <ul>
+          <li>Performed Security Analysis of Atomic Crosschain Technologies</li>
+          <li>Contributed towards the development of Atomic Crosschain Technology prototype on top of Java-based Ethereum Client, known as Hyperledger Besu. GitHub Handle: Raghavendra80.</li>
+          <li>Published a blog on state-of-art research in Crosschain technology.</li>
+        </ul>
+        <p><strong>Ethereum 2 work</strong></p>
+        <ul>
+          <li>Proposed an 'Atomic Cross Shard user-level Ether transfer' mechanism.</li>
+          <li>Ethereum 1x (Stateless Ethereum)</li>
+          <li>Proposed a way to adapt pointproofs technology for witness compression.</li>
+          <li>Researched and presented polynomial commitments for witness compression.</li>
+        </ul>
+      </div>
+
+      <div class="timeline-item">
+        <h3>Oracle Labs, Brisbane, Australia — Senior Researcher</h3>
+        <p class="pill">Jan 2014 – Oct 2019</p>
+        <p><strong>Java Vulnerability Detection team</strong></p>
+        <ul>
+          <li>Researched on a type system for information flow security for programming languages</li>
+          <li>Designed and implemented various security analyses on top of context-sensitive points-to analysis designed for libraries addressing the challenge of scalability</li>
+          <li>Initiated new research projects on adaptive context-sensitive points-to analysis for large programs, hybrid analysis for framework-based web application analyses</li>
+        </ul>
+        <p><strong>PL/SQL Vulnerability Detection team</strong></p>
+        <ul>
+          <li>Designed a static program analysis algorithm to identify cursor leaks in PL/SQL code. Implemented in C++ in the in-house Parfait/LLVM framework.</li>
+          <li>Worked on identifying (first-order and second-order) SQL injections in PL/SQL code. Invented ways to model data flows through database operations under closed-world and open-world scenarios.</li>
+        </ul>
+      </div>
+
+      <div class="timeline-item">
+        <h3>International Institute of Information Technology, Bangalore — Postdoctoral Fellowship</h3>
+        <p class="pill">Jun 2013 – Dec 2013</p>
+        <p>Worked on a research project to generate test cases for embedded system software meeting various coverage criteria — investigating dynamic symbolic execution mechanisms for state chart representations of embedded systems in Matlab.</p>
+      </div>
+
+      <div class="timeline-item">
+        <h3>Indian Institute of Science (Dept. of CSA), Bangalore</h3>
+        <p class="pill">PhD, Jan 2007 – Jun 2013 · Masters, Aug 2004 – Jan 2007</p>
+        <p><strong>PhD</strong> — Supervisor: Prof. Deepak D'Souza. Thesis: <em>Model Checking Infinite State Systems for Information Flow Security Properties.</em> Worked on the specification and verification of trace-based and bisimulation-based security properties on various classes of infinite state systems — Petri nets, pushdown systems, one counter automata — and investigated the problem of verifying known security definitions against programs.</p>
+        <p><strong>Masters</strong> — Supervisor: Prof. Deepak D'Souza. Thesis: <em>Verification of Information Flow Security Properties.</em> Worked on automatically verifying trace-based information security properties for abstract systems like finite automata.</p>
+      </div>
+
+      <div class="timeline-item">
+        <h3>Ittiam Systems — Software Engineer</h3>
+        <p class="pill">Aug 2002 – Jul 2004</p>
+        <p>Ittiam Systems is a DSP technology company. Programmed in C and assembly languages on different embedded processors, implementing speech codecs (GSM AMR, G.728) and audio codecs (MPEG 1/2 Layer 1/2/3) on embedded processors like Videocore, ARC, and ARM.</p>
+      </div>
+
+      <div class="timeline-item">
+        <h3>Visvesvaraya Technological University (VTU) — B.E. Computer Science</h3>
+        <p class="pill">Sep 1998 – Jul 2002</p>
+        <p>Sri Jayachamarajendra College of Engineering, Mysore, Karnataka, India.</p>
+        <p>Projects: a graphics editor in C for DOS, a text editor for Linux using ncurses, simulation of routing algorithms in C on Linux, an automated face recognition system using Machine Learning in C, and several hobby game projects. Undergraduate dissertation: "MP3 Decoder on C54X processor," as an internship at Ittiam Systems.</p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .timeline {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .timeline-item {
+    position: relative;
+    padding-left: 1.5rem;
+    border-left: 2px solid var(--border);
+  }
+
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -5px;
+    top: 4px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--accent);
+  }
+
+  .timeline-item h3 {
+    margin: 0 0 0.4rem;
+    font-size: 1.05rem;
+  }
+</style>

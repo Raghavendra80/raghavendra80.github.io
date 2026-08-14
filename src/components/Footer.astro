@@ -1,0 +1,22 @@
+---
+const links = [
+  { label: 'GitHub', href: 'https://github.com/Raghavendra80' },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/80raghavendra' },
+  { label: 'X', href: 'https://twitter.com/80Raghavendra' },
+  { label: 'Google Scholar', href: 'https://scholar.google.co.in/citations?user=JZik0U0AAAAJ&hl=en' },
+  { label: 'ORCID', href: 'https://orcid.org/0000-0002-6289-9723' },
+  { label: 'Supra', href: 'https://supra.com/research-team/raghavendra/' },
+];
+const year = new Date().getFullYear();
+---
+<footer class="site-footer">
+  <div class="wrap site-footer__row">
+    <span class="pill"><span class="dot"></span>online — Dubai, UAE</span>
+    <ul class="social-links">
+      {links.map((l) => (
+        <li><a href={l.href} target="_blank" rel="noopener noreferrer">{l.label}</a></li>
+      ))}
+    </ul>
+    <span>&copy; {year} Raghavendra Ramesh</span>
+  </div>
+</footer>
