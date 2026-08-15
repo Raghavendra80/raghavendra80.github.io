@@ -53,6 +53,9 @@ interface Meteor {
   vy: number;
   life: number;
   maxLife: number;
+  trailFactor: number;
+  maxAlpha: number;
+  lineWidth: number;
 }
 
 const STAR_COLORS = ['#e6edf3', '#9ec5fe', '#ffe9b3', '#c9d1d9'];
@@ -82,6 +85,7 @@ function initSpaceHero(canvas: HTMLCanvasElement) {
   let asteroids: Asteroid[] = [];
   let meteors: Meteor[] = [];
   let meteorTimer = 0;
+  let slowMeteorTimer = rand(180, 400);
   let time = 0;
 
   const mouse = { x: 0, y: 0, targetX: 0, targetY: 0 };
@@ -125,7 +129,8 @@ function initSpaceHero(canvas: HTMLCanvasElement) {
           orbitRadius: (28 + p * 22 + rand(-4, 4)) * dpr,
           radius: rand(1.6, 3.2) * dpr,
           angle: rand(0, Math.PI * 2),
-          angularSpeed: (rand(0.15, 0.35) / (p + 1)) * (Math.random() < 0.5 ? 1 : -1),
+          // ~5 minutes per revolution for the innermost planet, slower further out
+          angularSpeed: (rand(0.00025, 0.00045) / (p + 1)) * (Math.random() < 0.5 ? 1 : -1),
           color: ['#8ecae6', '#c77dff', '#90e0c9', '#e9c46a'][p % 4],
         })),
       };
@@ -156,20 +161,40 @@ function initSpaceHero(canvas: HTMLCanvasElement) {
     meteors = [];
   }
 
-  function spawnMeteor() {
+  function spawnMeteor(kind: 'fast' | 'slow') {
     const fromTop = Math.random() < 0.6;
     const startX = fromTop ? rand(0, width) : (Math.random() < 0.5 ? -20 * dpr : width + 20 * dpr);
     const startY = fromTop ? -20 * dpr : rand(0, height * 0.5);
-    const speed = rand(6, 10) * dpr;
     const angle = rand(Math.PI * 0.15, Math.PI * 0.35) + (startX > width / 2 ? Math.PI * 0.5 : 0);
-    meteors.push({
-      x: startX,
-      y: startY,
-      vx: Math.cos(angle) * speed,
-      vy: Math.sin(angle) * speed,
-      life: 0,
-      maxLife: rand(30, 50),
-    });
+
+    if (kind === 'fast') {
+      const speed = rand(6, 10) * dpr;
+      meteors.push({
+        x: startX,
+        y: startY,
+        vx: Math.cos(angle) * speed,
+        vy: Math.sin(angle) * speed,
+        life: 0,
+        maxLife: rand(30, 50),
+        trailFactor: 3,
+        maxAlpha: 1,
+        lineWidth: 1.5 * dpr,
+      });
+    } else {
+      // slow meteor: gentle, long arc across the sky, easy to miss
+      const speed = rand(0.35, 0.8) * dpr;
+      meteors.push({
+        x: startX,
+        y: startY,
+        vx: Math.cos(angle) * speed,
+        vy: Math.sin(angle) * speed,
+        life: 0,
+        maxLife: rand(360, 600),
+        trailFactor: 35,
+        maxAlpha: 0.55,
+        lineWidth: 1 * dpr,
+      });
+    }
   }
 
   function drawStars(dt: number) {
@@ -302,8 +327,14 @@ function initSpaceHero(canvas: HTMLCanvasElement) {
   function drawMeteors(dt: number) {
     meteorTimer -= dt;
     if (meteorTimer <= 0 && !prefersReducedMotion) {
-      spawnMeteor();
+      spawnMeteor('fast');
       meteorTimer = rand(120, 260);
+    }
+
+    slowMeteorTimer -= dt;
+    if (slowMeteorTimer <= 0 && !prefersReducedMotion) {
+      spawnMeteor('slow');
+      slowMeteorTimer = rand(600, 1200);
     }
 
     meteors = meteors.filter((m) => m.life < m.maxLife && m.x > -50 && m.x < width + 50 && m.y < height + 50);
@@ -311,14 +342,14 @@ function initSpaceHero(canvas: HTMLCanvasElement) {
       m.life += dt;
       m.x += m.vx * dt;
       m.y += m.vy * dt;
-      const alpha = 1 - m.life / m.maxLife;
-      const tailX = m.x - m.vx * 3;
-      const tailY = m.y - m.vy * 3;
+      const alpha = (1 - m.life / m.maxLife) * m.maxAlpha;
+      const tailX = m.x - m.vx * m.trailFactor;
+      const tailY = m.y - m.vy * m.trailFactor;
       const grad = ctx!.createLinearGradient(m.x, m.y, tailX, tailY);
       grad.addColorStop(0, `rgba(255, 255, 255, ${alpha})`);
       grad.addColorStop(1, 'transparent');
       ctx!.strokeStyle = grad;
-      ctx!.lineWidth = 1.5 * dpr;
+      ctx!.lineWidth = m.lineWidth;
       ctx!.beginPath();
       ctx!.moveTo(m.x, m.y);
       ctx!.lineTo(tailX, tailY);
