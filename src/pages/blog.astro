@@ -20,9 +20,9 @@ const posts = [
   },
 ].map((post) => ({ ...post, source: new URL(post.href).hostname.replace('www.', '') }));
 ---
-<BaseLayout title="Blog" description="Blog posts by Raghavendra Ramesh.">
+<BaseLayout title="Blogs" description="Blog posts by Raghavendra Ramesh.">
   <section class="section wrap reveal" style="border-top: none;">
-    <h2>Blog</h2>
+    <h2>Blogs</h2>
     <div class="blog-grid">
       {posts.map((post) => (
         <a class="card blog-card" href={post.href} target="_blank" rel="noopener noreferrer">

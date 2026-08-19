@@ -9,7 +9,7 @@ const routes: Route[] = [
   { label: 'Publications', href: '/publications/' },
   { label: 'Whitepapers', href: '/whitepapers/' },
   { label: 'Patents', href: '/patents/' },
-  { label: 'Blog', href: '/blog/' },
+  { label: 'Blogs', href: '/blog/' },
   { label: 'Talks & Videos', href: '/talks/' },
   { label: 'CV', href: '/cv/' },
 ];

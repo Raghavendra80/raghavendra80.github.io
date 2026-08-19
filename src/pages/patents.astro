@@ -45,15 +45,13 @@ const patents = [
     <div class="patents-grid">
       {patents.map((patent) => (
         <div class="card patent-card">
-          <h3 class="patent-card__title">
-            {patent.href ? (
-              <a href={patent.href} target="_blank" rel="noopener noreferrer">{patent.title}</a>
-            ) : (
-              patent.title
-            )}
-          </h3>
+          <h3 class="patent-card__title">{patent.title}</h3>
           <p class="pill">{patent.authors}</p>
-          {!patent.href && <p class="patent-card__pending">Patent pending — not yet publicly listed</p>}
+          {patent.href ? (
+            <a class="patent-card__link" href={patent.href} target="_blank" rel="noopener noreferrer">View Patent →</a>
+          ) : (
+            <p class="patent-card__pending">Patent pending — not yet publicly listed</p>
+          )}
         </div>
       ))}
     </div>
@@ -78,6 +76,13 @@ const patents = [
     font-size: 1rem;
     margin: 0 0 1rem;
     flex-grow: 1;
+  }
+
+  .patent-card__link {
+    margin-top: 0.5rem;
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--accent);
   }
 
   .patent-card__pending {
