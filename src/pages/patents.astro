@@ -1,0 +1,68 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const patents = [
+  {
+    title: 'Static program analysis method for detecting security bugs in programs that rely on code access control',
+    authors: 'Yi Lu, Raghavendra K. R.',
+  },
+  {
+    title: 'Scalable Points-to Analysis via Multiple Slicing',
+    authors: 'Paddy Krishnan, Raghavendra K. R.',
+  },
+  {
+    title: 'A Technique to Infer Security-Sensitive Entities in Libraries',
+    authors: 'Yi Lu, Paddy Krishnan, Sora Bae, Raghavendra K. R.',
+  },
+  {
+    title: 'Selective Object Sensitive Points-to Analysis',
+    authors: 'Behnaz Hassanshahi, Raghavendra K. R., Paddy Krishnan, Yi Lu, Bernhard Scholz',
+  },
+  {
+    title: 'Scalable provenance generation from Flow-insensitive Points-to information',
+    authors: 'Stepan Sindelar, Paddy Krishnan, Bernhard Scholz, Raghavendra K. R., Yi Lu',
+  },
+  {
+    title: 'Detecting second-order security vulnerabilities via modeling information flows through persistent storage',
+    authors: 'Raghavendra K. R., Padmanabhan Krishnan, Yi Lu',
+  },
+  {
+    title: 'Moonshot Consensus Protocol using Optimistic Proposals',
+    authors: 'Raghavendra Ramesh, Joshua Tobkin, Isaac Doidge',
+  },
+];
+---
+<BaseLayout title="Patents" description="Filed and granted patents by Raghavendra Ramesh.">
+  <section class="section wrap reveal" style="border-top: none;">
+    <h2>Patents</h2>
+    <div class="patents-grid">
+      {patents.map((patent) => (
+        <div class="card patent-card">
+          <h3 class="patent-card__title">{patent.title}</h3>
+          <p class="pill">{patent.authors}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .patents-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.25rem;
+    margin-top: 1.5rem;
+  }
+
+  .patent-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .patent-card__title {
+    font-size: 1rem;
+    margin: 0 0 1rem;
+    flex-grow: 1;
+  }
+</style>

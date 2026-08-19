@@ -8,6 +8,7 @@ const routes: Route[] = [
   { label: 'Home', href: '/', hint: 'about' },
   { label: 'Publications', href: '/publications/' },
   { label: 'Whitepapers', href: '/whitepapers/' },
+  { label: 'Patents', href: '/patents/' },
   { label: 'Blog', href: '/blog/' },
   { label: 'Talks & Videos', href: '/talks/' },
   { label: 'CV', href: '/cv/' },
