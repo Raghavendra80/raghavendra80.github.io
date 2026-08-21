@@ -13,7 +13,7 @@ const talks = [
   { title: 'Crosschain Workshop: Algorithm for Cross-shard Cross EE Atomic ETH transfer in Ethereum', date: 'March 10, 2021', embed: 'https://www.youtube.com/embed/0XU1vwrEoiQ?start=9527' },
   { title: 'Polynomial Commitments for Witness Compression for Ethereum 1.x', date: 'July 8, 2020', embed: 'https://www.youtube.com/embed/1Iaxr6FP3VU' },
   { title: 'Ethereum 2 Cross Shard Techniques', date: 'April 2, 2020', embed: 'https://www.youtube.com/embed/d8z7fUpJzsk' },
-];
+].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 ---
 <BaseLayout title="Talks & Videos" description="Talks and videos by Raghavendra Ramesh.">
   <section class="section wrap reveal" style="border-top: none;">
