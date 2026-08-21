@@ -11,7 +11,7 @@ const routes: Route[] = [
   { label: 'Patents', href: '/patents/' },
   { label: 'Blogs', href: '/blog/' },
   { label: 'Talks & Videos', href: '/talks/' },
-  { label: 'CV', href: '/cv/' },
+  { label: 'Before Supra', href: '/cv/' },
 ];
 
 function fuzzyScore(query: string, target: string): number {
