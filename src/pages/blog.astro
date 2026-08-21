@@ -5,18 +5,22 @@ const posts = [
   {
     title: "The Bridge Comes Full Circle: Announcing Supra's Reverse Bridge to Ethereum",
     href: 'https://medium.com/@raghavendra.kaundinya/the-bridge-comes-full-circle-announcing-supras-reverse-bridge-to-ethereum-41ea3b6c23ec',
+    date: 'August 19, 2026',
   },
   {
     title: 'Blockchain Interoperability: An Overview of the Current Research',
     href: 'https://consensys.io/blog/blockchain-interoperability-an-overview-of-the-current-research/',
+    date: 'April 28, 2021',
   },
   {
     title: 'Crypto — The Transformative Power of Decentralisation, Channelled Through Governments (United States)',
     href: 'https://medium.com/@raghavendra.kaundinya/crypto-the-transformative-power-of-decentralisation-channelled-through-governments-e6f885cd0313',
+    date: 'April 5, 2026',
   },
   {
     title: 'Crypto — The Transformative Power of Decentralisation, Channelled Through Governments (India)',
     href: 'https://medium.com/@raghavendra.kaundinya/crypto-the-transformative-power-of-decentralisation-channelled-through-governments-cae5312f4705',
+    date: 'April 12, 2026',
   },
 ].map((post) => ({ ...post, source: new URL(post.href).hostname.replace('www.', '') }));
 ---
@@ -26,7 +30,7 @@ const posts = [
     <div class="blog-grid">
       {posts.map((post) => (
         <a class="card blog-card" href={post.href} target="_blank" rel="noopener noreferrer">
-          <p class="pill">{post.source}</p>
+          <p class="pill">{post.source} · {post.date}</p>
           <h3 class="blog-card__title">{post.title}</h3>
           <span class="blog-card__link" aria-hidden="true">Read →</span>
         </a>
