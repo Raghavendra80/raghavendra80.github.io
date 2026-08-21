@@ -22,7 +22,9 @@ const posts = [
     href: 'https://medium.com/@raghavendra.kaundinya/crypto-the-transformative-power-of-decentralisation-channelled-through-governments-cae5312f4705',
     date: 'April 12, 2026',
   },
-].map((post) => ({ ...post, source: new URL(post.href).hostname.replace('www.', '') }));
+]
+  .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+  .map((post) => ({ ...post, source: new URL(post.href).hostname.replace('www.', '') }));
 ---
 <BaseLayout title="Blogs" description="Blog posts by Raghavendra Ramesh.">
   <section class="section wrap reveal" style="border-top: none;">
