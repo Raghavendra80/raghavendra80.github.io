@@ -1,0 +1,135 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const primusServices = [
+  { name: 'Access control', q: 'Who can reach what — across application roles, tokens, plugin routes and users.' },
+  { name: 'Network isolation', q: 'What traffic can reach where — derived from configuration, without sending a single packet.' },
+  { name: 'Data residency', q: 'Where regulated data could go — including backups, replicas, keys and caches.' },
+];
+
+const mldInnovations = [
+  {
+    title: 'Statute-anchored reasoning engine',
+    body: 'Legal reasoning is grounded in the statutory text itself, not in a language model’s recollection of the law. Every conclusion traces back to the provision it rests on, so it can be checked rather than trusted.',
+  },
+  {
+    title: 'Time-aware law',
+    body: 'Answers reflect the law as it stood on the date of the matter. As Indian criminal and procedural law is re-codified, the provision that applies today may not be the one that applied when the events occurred.',
+  },
+  {
+    title: 'Evidentiary gap analysis & case strength',
+    body: 'It goes beyond drafting: it reasons about what a case still needs to prove, which evidence is missing, and how strong the matter is — analysis that normally demands a senior practitioner.',
+  },
+  {
+    title: 'MY Virtual Attorney — adapts to its user',
+    body: 'One counsel layer, two very different users: plain-language guidance for a citizen, citation-backed analysis for an advocate. It drafts FIRs, petitions and consumer complaints, and assists with court preparation.',
+  },
+  {
+    title: 'Vernacular-first by design',
+    body: 'Speech in, speech out, and photograph-a-notice OCR, with full Kannada support, built on AI4Bharat’s Indic speech and OCR models — so legal help reaches people who do not read or type English.',
+  },
+  {
+    title: 'Human decides, by construction',
+    body: 'Every output is a proposal to accept, edit or discard. Nothing leaves the desk without a qualified person’s approval, and AI-generated content is always labelled — never passed off as official wording.',
+  },
+  {
+    title: 'Safety-first citizen pathway',
+    body: 'A guided, non-diagnostic checklist routes citizens to the right help, and surfaces safety resources immediately when there is any sign of danger.',
+  },
+  {
+    title: 'Measured on real usage, not benchmarks',
+    body: 'Every accept, edit and reject is instrumented, so the system is measured and corrected against how practitioners actually use it — not against leaderboard scores.',
+  },
+];
+---
+<BaseLayout title="Ventures" description="Primus Credence and Nucleus Tech Works — Raghavendra Ramesh's ventures at the meeting point of research and entrepreneurship.">
+  <section class="section wrap reveal" style="border-top: none;">
+    <h2>Ventures</h2>
+    <blockquote class="vision">
+      In this agentic-AI world, <strong>research and entrepreneurship must walk hand in hand.</strong> Research without entrepreneurship stays on paper and cannot solve real problems. Entrepreneurship without research becomes a hotch-potch — a stitching-together of existing solutions that will not advance the field or help real users at scale. My work lives at the meeting point: the mathematical rigour of two decades of research, carried all the way into products people actually use.
+    </blockquote>
+    <p class="lede">Two ventures, one conviction: deep research should end in something people can use.</p>
+  </section>
+
+  <section id="primus-credence" class="section wrap reveal">
+    <h2>Primus Credence</h2>
+    <p class="pill">Founder &amp; CEO · Dubai, UAE · <a href="https://primuscredence.com" target="_blank" rel="noopener noreferrer">primuscredence.com ↗</a></p>
+    <p class="tagline">Provable security for applications — <em>who can reach what inside your application, proved, not assumed.</em></p>
+    <p>Primus Credence brings mathematical rigour to security at the application layer, its plugins, and the seams between them — the part of the stack that sits beyond the already-proven cloud base. Detection shows what <em>is</em> happening; a proof shows what <em>cannot</em> happen.</p>
+    <div class="ventures-grid">
+      {primusServices.map((s) => (
+        <div class="card">
+          <h3 class="mini-title">{s.name}</h3>
+          <p>{s.q}</p>
+        </div>
+      ))}
+    </div>
+    <ul class="points">
+      <li>Every engagement ends in either a <strong>proof</strong> or a concrete <strong>counter-example</strong> — the exact thing that breaks it — followed by a fix and a re-proof.</li>
+      <li>Built for Platform and AppSec teams, ISVs, enterprises and government across the UAE and GCC, with MSSPs, consultancies and auditors as channel partners.</li>
+      <li><strong>Research roots:</strong> PhD work on verifying information-flow security at IISc, and scalable static security analysis at Oracle Labs (six US patents) — now productised.</li>
+    </ul>
+  </section>
+
+  <section id="nucleus-tech-works" class="section wrap reveal">
+    <h2>Nucleus Tech Works</h2>
+    <p class="pill">CEO · Mysuru, India · <a href="https://nucleustechworks.com" target="_blank" rel="noopener noreferrer">nucleustechworks.com ↗</a></p>
+    <p class="tagline"><em>At Thought Speed</em> — making high-end legal intelligence affordable and usable, from a citizen holding a notice to an advocate preparing for court.</p>
+
+    <h3>MY Legal Desktop</h3>
+    <p><strong>MY Legal Desktop</strong> is an agentic-AI legal workspace built for Indian law as it stands today — drafting, document review, evidentiary gap analysis and case-strength assessment — for citizens, advocates, law firms, corporate legal teams and government bodies. <a href="https://mylegaldesktop.nucleustechworks.com" target="_blank" rel="noopener noreferrer">Open MY Legal Desktop ↗</a></p>
+
+    <h3 class="sub">What’s new in it</h3>
+    <div class="ventures-grid">
+      {mldInnovations.map((i) => (
+        <div class="card">
+          <h3 class="mini-title">{i.title}</h3>
+          <p>{i.body}</p>
+        </div>
+      ))}
+    </div>
+    <p class="roots"><strong>Research roots:</strong> two decades of formal methods, program analysis and information-flow verification. The same discipline that proves properties of programs here grounds legal reasoning in statute and keeps every step auditable.</p>
+  </section>
+
+  <section class="section wrap reveal">
+    <p class="closing">Research → Product → Real users at scale. <span class="glow-text">That pipeline is what I build.</span></p>
+  </section>
+</BaseLayout>
+
+<style>
+  .lede,
+  .tagline {
+    font-size: 1.1rem;
+    margin-top: 1.25rem;
+  }
+
+  .mini-title {
+    font-size: 1rem;
+    margin: 0 0 0.5rem;
+  }
+
+  .ventures-grid .card p {
+    margin: 0;
+    color: var(--text-muted);
+  }
+
+  .sub {
+    margin-top: 2rem;
+  }
+
+  .points,
+  .roots {
+    margin-top: 1.75rem;
+  }
+
+  .points li {
+    margin-bottom: 0.5rem;
+  }
+
+  .closing {
+    font-family: var(--font-mono);
+    font-size: 1.25rem;
+    text-align: center;
+    margin: 0;
+  }
+</style>

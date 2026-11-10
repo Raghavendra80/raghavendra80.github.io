@@ -29,6 +29,7 @@ git config core.hooksPath .githooks
 ## Content
 
 - `/` — home/about
+- `/ventures/` — Primus Credence & Nucleus Tech Works
 - `/publications/` — BibBase-embedded bibliography (sourced from `public/files/conf.bib` and `public/files/pre.bib`)
 - `/whitepapers/` — Supra whitepapers
 - `/blog/` — external blog post links

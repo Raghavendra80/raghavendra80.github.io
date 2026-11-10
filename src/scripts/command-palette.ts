@@ -6,6 +6,7 @@ interface Route {
 
 const routes: Route[] = [
   { label: 'Home', href: '/', hint: 'about' },
+  { label: 'Ventures', href: '/ventures/', hint: 'Primus Credence · Nucleus Tech Works' },
   { label: 'Publications', href: '/publications/' },
   { label: 'Whitepapers', href: '/whitepapers/' },
   { label: 'Patents', href: '/patents/' },
